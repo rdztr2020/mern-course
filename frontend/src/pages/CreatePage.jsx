@@ -67,6 +67,7 @@ const CreatePage = () => {
 					</VStack>
 				</Box>
 			</VStack>
+			
 		</Container>
 	);
 };

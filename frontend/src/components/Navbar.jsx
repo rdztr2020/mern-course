@@ -31,13 +31,9 @@ const Navbar = () => {
           fontWeight={"bold"}
           textTransform={"uppercase"}
           textAlign={"center"}
-          
-        >
-		
-          <Link to={"/"}>🤓</Link>
-        </Text>
+        ></Text>
 
-		<Text
+        <Text
           fontSize={{ base: "22", sm: "28" }}
           fontWeight={"bold"}
           textTransform={"uppercase"}
@@ -45,7 +41,6 @@ const Navbar = () => {
           bgGradient={"linear(to-r, cyan.400, blue.500)"}
           bgClip={"text"}
         >
-		
           <Link to={"/"}>Nerd Store</Link>
         </Text>
 

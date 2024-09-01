@@ -46,7 +46,7 @@ const Navbar = () => {
 
         <HStack spacing={2} alignItems={"center"}>
           <Link to={"/create"}>
-            <Button>
+            <Button >
               <PlusSquareIcon fontSize={20} />
             </Button>
           </Link>

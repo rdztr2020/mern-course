@@ -97,8 +97,9 @@ const ProductCard = ({ product }) => {
 				</Text>
 
 				<HStack spacing={2}>
-					<IconButton icon={<EditIcon />} onClick={onOpen} colorScheme='blue' />
+					<IconButton aria-label="delete product" icon={<EditIcon />} onClick={onOpen} colorScheme='blue' />
 					<IconButton
+          aria-label="delete product"
 						icon={<DeleteIcon />}
 						onClick={() => handleDeleteProduct(product._id)}
 						colorScheme='red'
@@ -138,13 +139,15 @@ const ProductCard = ({ product }) => {
 
 					<ModalFooter>
 						<Button
+              
+              aria-label="edit and update product"
 							colorScheme='blue'
 							mr={3}
 							onClick={() => handleUpdateProduct(product._id, updatedProduct)}
 						>
 							Update
 						</Button>
-						<Button variant='ghost' onClick={onClose}>
+						<Button aria-label="delete product" variant='ghost' onClick={onClose}>
 							Cancel
 						</Button>
 					</ModalFooter>

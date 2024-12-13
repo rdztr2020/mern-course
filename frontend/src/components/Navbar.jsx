@@ -5,6 +5,7 @@ import {
   HStack,
   Text,
   useColorMode,
+  useColorModeValue
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
@@ -16,13 +17,13 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Container maxW={"1140px"} px={4}>
+    <Container maxW={"1440px"} px={4}>
       <Flex
         h={16}
         alignItems={"center"}
         justifyContent={"space-between"}
         flexDir={{
-          base: "column",
+          base: "row",
           sm: "row",
         }}
       >
@@ -32,25 +33,26 @@ const Navbar = () => {
           textTransform={"uppercase"}
           textAlign={"center"}
         ></Text>
-
+          
         <Text
-          fontSize={{ base: "22", sm: "28" }}
+          fontSize={{ base: "30", sm: "30" }}
           fontWeight={"bold"}
           textTransform={"uppercase"}
           textAlign={"center"}
-          bgGradient={"linear(to-r, cyan.400, blue.500)"}
+          bg={useColorModeValue("black", "white")}
+          //bgGradient={"linear(to-r, black, black)"}
           bgClip={"text"}
         >
-          <Link to={"/"}>Nerd Store</Link>
+          <Link to={"/"}>4 SALE 💎</Link>
         </Text>
 
         <HStack spacing={2} alignItems={"center"}>
-          <Link to={"/create"}>
-            <Button >
+          <Link to={"/create"}id="link">
+            <Button aria-label="new product page">
               <PlusSquareIcon fontSize={20} />
             </Button>
           </Link>
-          <Button onClick={toggleColorMode}>
+          <Button onClick={toggleColorMode} aria-label="change dark light mode">
             {colorMode === "light" ? <IoMoon /> : <LuSun size="20" />}
           </Button>
         </HStack>

@@ -4,8 +4,8 @@
 	"description": "magic",
 	"main": "index.js",
 	"scripts": {
-		"dev": "nodemon backend/server.js",
-		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+		"dev": "npm install && npm install --prefix frontend && nodemon backend/server.js",
+		"build": "npm run build --prefix frontend",
 		"start":"node backend/server.js"
 	},
 	"type": "module",
